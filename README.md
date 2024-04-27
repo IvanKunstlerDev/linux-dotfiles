@@ -17,3 +17,6 @@ Algunos de los archivos de configuracion que se encuentran en este repositorio s
 
 ## Tema que utilizo
 Toda mi personalizacion actual la hice siguiendo el esquema de colores de mi tema favorito de Visual Studio Code, "Tokyo night".  Tanto el Vs Code, como la Waybar, los widgets Eww, Wofi y Dunst llevan este tema
+
+## Screenshots
+![An desktop screenshot](https://github.com/IvanKunstlerDev/linux-dotfiles/blob/master/desktop-snapshot.png)
