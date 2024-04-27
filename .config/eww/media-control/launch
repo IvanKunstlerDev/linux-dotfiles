@@ -1,0 +1,13 @@
+#!/bin/bash
+
+visible="$(eww get media_visible)"
+
+if [[ $visible == false ]]; then
+    eww update media_visible=true
+    eww open music-window
+
+elif [[ $visible == true ]]; then
+    eww update media_visible=false
+    eww close music-window
+
+fi

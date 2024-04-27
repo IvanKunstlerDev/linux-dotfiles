@@ -1,0 +1,80 @@
+* {
+    all: unset;
+    font-family: "Ubuntu", "Font Awesome 6 Free Solid";
+    color: $gray1;
+}
+
+
+// Volume widget
+.volume {
+    background-color: $black;
+    box-shadow: 0 0 4px 3px $shadow;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.volume-icon label {
+    font-size: 40px;
+    margin: 20px 0;
+    color: $blue;
+}
+
+.volume scale trough highlight {
+	background-color: $blue;
+	border-radius: 50px;
+}
+
+.volume scale trough {
+    background-color: $gray6;
+    min-height: 10px;
+    margin: 0px 20px 20px 20px;
+    border-radius: 50px;
+}
+
+.prueba {
+    background-color: $black;
+    margin: 10px;
+    box-shadow: 0 0 4px 3px $shadow;
+}
+
+
+.power-bg {
+    background: $black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.power-container {
+    background-color: $black;
+    box-shadow: 0 0 4px 3px $shadow;
+}
+
+.power-btns-container {
+    margin: 14px 18px;
+    margin-top: 18px;
+}
+
+.power-btns-container button {
+    font-size: 28px;
+}
+
+.exit-btn label {
+    color: $violet;
+}
+
+.off-btn label {
+    color: $red;
+}
+
+.reboot-btn label {
+    color: $yellow;
+}
+
+.logout-btn label {
+    color: $green;
+}
+
+.power-labels{
+    color: $gray3;
+}

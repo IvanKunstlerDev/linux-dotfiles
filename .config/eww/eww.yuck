@@ -1,0 +1,30 @@
+;; Bar vars
+;(defpoll time :interval "5s"
+;  :initial `date +'{"hour":"%H","min":"%M"}'`
+;  `date +'{"hour":"%H","min":"%M"}'`)
+
+;; Media vars  
+(defvar default_image "./assets/default_image.jpg")
+(deflisten music_title :initial "Esperando cancion..." "playerctl --follow metadata --format {{title}}")
+(deflisten music_artist :initial "Desconocido" "playerctl --follow metadata --format {{artist}}")
+(deflisten music_image :initial "" "./scripts/media_control.sh --image")
+(deflisten music_status :initial "Paused" "playerctl --follow status")
+
+
+;; Volume vars
+(defpoll current_volume :interval "100ms" :run-while volume_visible "pamixer --get-volume")
+(defpoll volume_icon :interval "100ms" :run-while volume_visible "./scripts/volume_control.sh --icon")
+(defpoll mute :interval "100ms" :run-while volume_visible "pamixer --get-mute")
+
+
+;; Widgets visibility
+(defvar media_visible false)
+(defvar power_visible false)
+(defvar volume_visible false)
+
+
+;; Widgets
+;(include "./bar/bar.yuck")
+(include "./media-control/media.yuck")
+(include "./power-menu/power.yuck")
+(include "./volume-popup/volume.yuck")

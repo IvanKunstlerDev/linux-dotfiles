@@ -1,0 +1,11 @@
+{
+    "position": "left",
+    "width": 70,
+    "margin-right": -14,
+    "spacing": 0,
+    "include": ["~/.config/waybar/modules.json"],
+    "modules-left": ["custom/home-center", "hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["custom/notifications", "custom/music", "clock", "custom/power"],
+    "reload_style_on_change": true
+}

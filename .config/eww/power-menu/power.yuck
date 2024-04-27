@@ -1,0 +1,32 @@
+;; Power menu
+(defwindow power-window
+    :monitor 0
+    :stacking "overlay"
+    :geometry (geometry :height "100%" 
+                        :width "100%"
+                        :anchor "center right")
+    (power-widget))
+
+(defwidget power-widget []
+    (box :class "power-background" :orientation "h" :sapce-evenly false
+        :vexpand true :hexpand true
+        ;:style "background-image: url('./wallpaper')"
+        (box :class "power-container"
+            :valign "center" :halign "center"
+            (box :class "power-btns-container" :orientation "h"
+                :space-evenly true :spacing 14
+                (box :class "power-btns" :orientation "v"
+                    (button :onclick "eww close power-window" :class "exit-btn" "")
+                    (label :class "power-labels" :text "Volver atras"))
+                (box :class "power-btns" :orientation "v"
+                    (button :onclick "poweroff" :class "off-btn" "")
+                    (label :class "power-labels" :text "Apagar"))
+                (box :class "power-btns" :orientation "v"
+                    (button :onclick "reboot" :class "reboot-btn" "")
+                    (label :class "power-labels" :text "Reiniciar"))
+                (box :class "power-btns" :orientation "v"
+                    (button :onclick "systemctl suspend & eww close power-window" :class "suspend-btn" "")
+                    (label :class "power-labels" :text "Suspender"))
+                (box :class "power-btns" :orientation "v"
+                    (button :onclick "loginctl kill-session self" :class "logout-btn" "")
+                    (label :class "power-labels" :text "Cerrar sesion"))))))

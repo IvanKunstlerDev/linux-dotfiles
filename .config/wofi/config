@@ -1,0 +1,10 @@
+style=~/.config/wofi/style.css
+mode=drun
+
+allow_images=true
+image_size=28px
+
+width=400px
+height=500px
+
+prompt=Aplicaciones

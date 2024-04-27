@@ -1,0 +1,142 @@
+;; Bar
+
+(defwindow bar
+    :monitor 0
+    :stacking "bottom"
+    :exclusive true
+    :geometry (geometry :height "100%" :width "64"
+                        :x "0" :y "0"
+                        :anchor "right center")
+    (bar_layout))
+
+(
+    defwidget bar_layout []
+    (
+        box :class "bar-layout"
+        :orientation "v"
+        :vexpand true
+        (top_widgets)
+        (mid_widgets)
+        (bottom_widgets)
+    )
+)
+
+(
+    defwidget top_widgets []
+    (
+        box :class "bar-top"
+        :orientation "v"
+        :hexpand true
+        :valign "start"
+        :space-evenly false
+        (menu)
+        (workspaces)
+    )
+)
+
+(
+    defwidget mid_widgets []
+    (
+        box :class "bar-mid"
+        :orientation "v"
+        :hexpand true
+        :valign "center"
+    )
+)
+
+(
+    defwidget bottom_widgets []
+    (
+        box :class "bar-bottom"
+        :orientation "v"
+        :hexpand true
+        :vexpand false
+        :valign "end"
+        :space-evenly false
+        (notif)
+        (music)
+        (clock)
+        (power)
+    )
+)
+
+
+;; Top Widgets
+
+(
+    defwidget menu []
+    (
+        button :class "default-w bar-menu"
+        :tooltip "Panel"
+        "󰣇"
+    )
+)
+
+(deflisten wk_list :initial "[]" "./scripts/get_workspaces.sh")
+(deflisten current_wk :initial "1" "./scripts/get_active_workspace.sh")
+
+(
+    defwidget workspaces []
+    (
+        box :class "workspaces-container"
+        :orientation "v"
+        :space-evenly true
+        :spacing 7
+        (
+            for workspace in wk_list
+            (
+                eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+                (
+                    label :text {workspace.id == current_wk ? "󰮯" : ""}
+                )
+            )
+        )
+    )
+)
+
+
+;; Bottom widgets
+
+(
+    defwidget notif []
+    (
+        button :class "default-w notif"
+        :tooltip "Notificaciones"
+        ""
+    )
+)
+
+(
+    defwidget music []
+    (
+        button :class "default-w music"
+        :onclick "playerctl play-pause"
+        :onrightclick "./media-control/launch"
+        :tooltip "Musica"
+        {music_status == "Playing" ? "" : ""}
+    )
+)
+
+(
+    defwidget clock []
+    (
+        box :class "default-w clock"
+        :orientation "v"
+        (
+            label :text "${time.hour}"
+        )
+        (
+            label :text "${time.min}"
+        )
+    )
+)
+
+(
+    defwidget power []
+    (
+        button :class "default-w power-btn"
+        :onclick "eww open power-window"
+        :tooltip "Salir"
+        ""
+    )
+)

@@ -1,0 +1,74 @@
+* {
+    all: unset;
+    font-family: "Ubuntu", "Font Awesome 6 Free Solid";
+    color: $gray1;
+    font-size: 16px;
+}
+
+.bar-layout {
+    margin: 14px;
+    margin-left: 8px;
+    box-shadow: 0 0 4px 3px $shadow;
+    background-color: $black;
+    border-radius: 8px;
+}
+
+.bar-top {
+    margin-top: 6px;
+}
+
+.bar-bottom {
+    margin-bottom: 6px;
+}
+
+.default-w {
+    margin: 6px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+tooltip {
+    background-color: $gray6;
+    margin: 4px;
+    border-radius: 8px;
+    //border: 1px solid $gray1;
+}
+
+tooltip label {
+    font-family: Iosevka;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+// Top Widgets
+
+.bar-menu {
+    margin-right: 8px;
+    margin-top: -2px;
+}
+
+.bar-menu label {
+    color: $blue;
+    font-size: 29px;
+}
+
+
+// Bottom widgets
+
+.notif label {
+    color: $yellow;
+}
+
+.music label {
+    color: $violet;
+}
+
+.clock label {
+    font-weight: bold;
+    font-family: "Iosevka";
+    font-size: 18px;
+}
+
+.power-btn label {
+    color: $red;
+}

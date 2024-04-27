@@ -1,0 +1,17 @@
+;; Volume pop-up
+(defwindow volume-window
+    :monitor 0
+    :stacking "overlay"
+    :geometry (geometry :x "573px" 
+                        :y "4px" 
+                        :height "120px" 
+                        :width "220px"
+                        :anchor "bottom right")
+    (volume-widget))
+
+
+(defwidget volume-widget []
+    (box :class "volume" :orientation "v" :space-evenly false :vexpand false :hexpand false
+        (button :class "volume-icon" :onclick "pamixer -t" "${volume_icon}")
+        (scale :onchange "pamixer --set-volume {}" :active true 
+               :min 0 :value {mute ? 0 : current_volume} :max 100)))

@@ -1,0 +1,61 @@
+* {
+    all: unset;
+    font-family: "Ubuntu", "Font Awesome 6 Free Solid";
+    color: $gray1;
+}
+
+
+.music-player {
+    box-shadow: 0px 0px 4px 3px $shadow;
+    background-color: $black;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.music-image {
+    background: $black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 0 0;
+}
+
+.music-image-gradient {
+    background-image: linear-gradient(to top, $black, rgba(26, 27, 38, 0.3));
+}
+
+.music-title {
+    font-family: Iosevka;
+    font-weight: bold;
+    font-size: 14px;
+    color: $gray3;
+    margin: 0 10px;
+}
+
+.music-artist {
+    font-family: Iosevka;
+    color: $gray5;
+    margin: 0 10px;
+}
+
+.music-controls {
+    margin-bottom: 50px;
+    margin-top: 14px;
+}
+
+.music-controls button{
+    font-size: 20px;
+    background: transparent;
+}
+
+.music-controls label {
+    color: $violet;
+}
+
+.pause-button{
+    margin: 0 10px;
+}
+
+.pause-button label {
+    font-size: 36px;
+}

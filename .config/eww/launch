@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ ! `pidof eww` ]]; then
+    eww daemon
+    sleep 1
+
+fi
+
+eww open bar

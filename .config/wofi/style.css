@@ -1,0 +1,64 @@
+@define-color yellow #e0af68;
+@define-color red #f7768e;
+@define-color violet #bb9af7;
+@define-color blue #7aa2f7;
+@define-color black #1a1b26;
+@define-color white #c0caf5;
+@define-color gray6 #24283b;
+@define-color gray5 #414868;
+
+* {
+  font-family: "Iosevka Nerd Font";
+  font-weight: bold;
+  color: @white;
+}
+
+#window {
+  background-color: transparent;
+}
+
+#outer-box {
+  margin: 10px;
+  border-radius: 8px;
+  background-color: @black;
+  box-shadow: 0 0 4px 3px rgba(0,0,0,0.5);
+}
+
+#input {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: @gray6;
+  font-size: 16px;
+  color: @white;
+}
+
+#input label {
+  margin: 5px;
+}
+
+#inner-box {
+  margin: 5px;
+}
+
+#entry {
+  font-size: 16px;
+  border-radius: 6px;
+  margin: 1px 0;
+}
+
+#entry:selected {
+  background-color: @violet;
+}
+
+#text {
+  margin: 4px 8px;
+}
+
+#text:selected {
+  color: @black;
+}
+
+#scroll {
+  margin-bottom: 5px;
+}

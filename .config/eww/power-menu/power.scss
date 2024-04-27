@@ -1,0 +1,51 @@
+* { 
+    all: unset;
+    font-family: "Ubuntu", "Font Awesome 6 Free Solid";
+    color: $gray1;
+}
+
+.power-background {
+    //background-position: center center;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.power-container {
+    background-color: $black;
+    box-shadow: 0 0 4px 3px $shadow;
+    border-radius: 8px;
+}
+
+.power-btns-container {
+    margin: 14px 18px;
+    margin-top: 18px;
+}
+
+.power-btns-container button {
+    font-size: 28px;
+}
+
+.exit-btn label {
+    color: $violet;
+}
+
+.off-btn label {
+    color: $red;
+}
+
+.reboot-btn label {
+    color: $yellow;
+}
+
+.suspend-btn label {
+    color: $blue;
+}
+
+.logout-btn label {
+    color: $green;
+}
+
+.power-labels{
+    color: $gray3;
+}

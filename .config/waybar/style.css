@@ -1,0 +1,77 @@
+@define-color yellow #e0af68;
+@define-color red #f7768e;
+@define-color violet #bb9af7;
+@define-color blue #7aa2f7;
+
+* {
+    font-family: "Font Awesome 6 Free Solid", "Hack Nerd Font";
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #c0caf5;
+}
+
+
+/* Window styles */
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar > box {
+    background-color: #1a1b26;
+    margin: 14px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.7);
+}
+
+.module {
+    margin: 6px 0px;
+}
+
+
+/* Workspace styles */
+#workspaces label {
+    color: @blue;
+}
+
+#workspaces button.empty label {
+    color: #c0caf5;
+}
+
+#workspaces button.active label {
+    color: @yellow;
+    font-size: 17px;
+    margin-left: -2px;
+}
+
+
+/* Modules styles */
+#custom-home-center {
+    color: @blue;
+    margin-top: 6px;
+    margin-left: -4px;
+    margin-bottom: 0;
+    font-size: 26px;
+}
+
+#custom-music {
+    color: @violet;
+}
+
+#custom-notifications {
+    color: @yellow;
+}
+
+#clock {
+    font-family: "Iosevka";
+    font-weight: bold;
+    font-size: 18px;
+    margin: 4px 8px 4px 8px;
+    padding: 0px;
+}
+
+#custom-power {
+    color: @red;
+    margin-bottom: 14px;
+}
+
